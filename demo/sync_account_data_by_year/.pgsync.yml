@@ -1,0 +1,7 @@
+from: postgres://admin:admin@localhost:5432/test
+to: postgres://admin2:admin2@localhost:5433/test2
+
+groups:
+  account_data:
+    account: "where EXTRACT(YEAR FROM create_time) = {1}"
+    account_setting: "where EXTRACT(YEAR FROM create_time) = {1}"
